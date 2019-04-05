@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // App 组件，大写字母开头
 import TodoList from './TodoList';
+// PWA progressive web application
 import * as serviceWorker from './serviceWorker';
 import './style.css';
 
