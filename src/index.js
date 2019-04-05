@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 // App 组件，大写字母开头
 import TodoList from './TodoList';
 import * as serviceWorker from './serviceWorker';
+import './style.css';
 
 //jsx语法，可以在React中直接使用标签
 ReactDOM.render(<TodoList />, document.getElementById('root'));
