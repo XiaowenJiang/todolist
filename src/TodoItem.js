@@ -2,13 +2,20 @@ import React from 'react'
 
 // 子组件想与父组件通信要利用父组件传过来的函数
 class TodoItem extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleDelete = this.handleDelete.bind(this);
+    }
+
     handleDelete() {
-        this.props.delete(this.props.index);
+        const { remove, index } = this.props;
+        remove(index);
     }
 
     render() {
+        const { content } = this.props;
         return (
-            <div onClick={this.handleDelete.bind(this)}>{this.props.content}</div>
+            <div onClick={this.handleDelete}>{content}</div>
         )
     }
 }
